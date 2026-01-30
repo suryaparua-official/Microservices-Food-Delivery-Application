@@ -1,0 +1,239 @@
+/* ================= RESET ================= */
+.navbar * {
+  box-sizing: border-box;
+}
+
+/* ================= NAVBAR WRAPPER ================= */
+.navbar {
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ================= NAVBAR CONTAINER (MATCH FOOTER) ================= */
+.navbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 60px;
+
+  display: grid;
+  grid-template-columns: 220px 520px auto; /* 🔥 reduced middle */
+  align-items: center;
+  column-gap: 32px;
+}
+
+/* ================= LEFT (LOGO) ================= */
+.nav-left .brand {
+  font-size: 28px; /* SAME as footer logo */
+  font-weight: 800;
+  color: #e11d48;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+/* ================= MIDDLE (SEARCH BAR) ================= */
+.nav-middle {
+  display: flex;
+  align-items: center;
+
+  background: #f8f8f8;
+  padding: 8px 12px; /* smaller padding */
+  border-radius: 12px;
+  gap: 10px;
+
+  max-width: 420px; /* 🔥 LIMIT WIDTH */
+}
+
+.nav-middle:focus-within {
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.nav-middle img {
+  opacity: 0.6;
+}
+
+/* City input (smaller) */
+.nav-middle input:first-of-type {
+  width: 120px;
+  font-weight: 500;
+}
+
+/* Divider | */
+.nav-middle .divider {
+  width: 1px;
+  height: 20px;
+  background: #ddd;
+}
+
+/* Search wrapper */
+.search-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.nav-middle input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.nav-middle input::placeholder {
+  color: #888;
+}
+
+/* Buttons */
+.nav-middle button {
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-middle button:hover {
+  color: #e11d48;
+}
+
+/* ================= SEARCH DROPDOWN ================= */
+.search-dropdown {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  z-index: 2000;
+}
+
+.search-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-item:hover {
+  background: #f9fafb;
+}
+
+.search-item small {
+  color: #9ca3af;
+  margin-right: 6px;
+  font-size: 12px;
+}
+
+/* ================= RIGHT (CART / ORDERS / USER) ================= */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Links styled like footer */
+.nav-right .nav-link {
+  text-decoration: none;
+  color: #b5b5b5;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-right .nav-link:hover {
+  color: #e11d48;
+}
+
+.nav-right .nav-link.active {
+  color: #ffffff;
+}
+
+/* ================= CART BADGE ================= */
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  background: #e11d48;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= USER ================= */
+.user-wrapper {
+  position: relative;
+}
+
+.user-icon {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* ================= DROPDOWN ================= */
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  min-width: 180px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.user-dropdown button {
+  width: 100%;
+  border: none;
+  background: #e11d48;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.user-dropdown button:hover {
+  background: #be123c;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar-inner {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
+
+  .nav-right {
+    justify-content: space-between;
+  }
+}
+.divider {
+  color: #c7c7c7;
+  font-size: 1px;
+  line-height: 1;
+  margin: 0 2px;
+  user-select: none;
+}
+.search-wrapper input {
+  width: 100%;
+  font-size: 14px;
+}

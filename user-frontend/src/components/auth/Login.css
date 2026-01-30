@@ -1,0 +1,75 @@
+.auth-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 40px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field span {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.auth-links {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #e11d48;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.switch-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.password-field {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 16px;
+}
