@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* ================================
+   BASE TEXT & SELECTION
+================================ */
+::selection {
+  background: rgba(244, 63, 94, 0.4); /* rose-500 */
+  color: #fff;
+}
+
+/* ================================
+   INPUT – Premium Glass Style
+================================ */
+.input {
+  @apply w-full px-4 py-3 rounded-xl
+         bg-white/10 backdrop-blur-md
+         border border-white/20
+         text-white placeholder-white/60
+         outline-none
+         focus:bg-white/15
+         focus:border-rose-400
+         focus:ring-2 focus:ring-rose-400/30
+         transition-all duration-200;
+}
+
+/* ================================
+   PRIMARY BUTTON – Premium Gradient
+================================ */
+.btn-primary {
+  @apply w-full py-3 rounded-xl
+         bg-gradient-to-r from-rose-500 to-red-500
+         text-white font-semibold text-sm tracking-wide
+         shadow-lg shadow-rose-500/20
+         hover:from-rose-600 hover:to-red-600
+         hover:shadow-rose-500/30
+         active:scale-[0.97]
+         transition-all duration-200;
+}
+
+/* ================================
+   GOOGLE BUTTON – Glass Neutral
+================================ */
+.btn-google {
+  @apply w-full py-3 rounded-xl
+         bg-white/10 backdrop-blur-md
+         border border-white/25
+         text-white font-medium text-sm
+         flex items-center justify-center gap-3
+         shadow-md shadow-black/20
+         hover:bg-white/20
+         active:scale-[0.97]
+         transition-all duration-200
+         relative;
+}
+
+/* Google icon */
+.btn-google::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("/google.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* ================================
+   HEADINGS & TEXT
+================================ */
+.auth-title {
+  @apply text-2xl font-semibold text-white text-center;
+}
+
+.auth-subtitle {
+  @apply text-sm text-white/70 text-center mt-2;
+}
+
+/* ================================
+   DIVIDER (OR)
+================================ */
+.auth-divider {
+  @apply flex items-center gap-4 my-6 text-white/40 text-sm;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  @apply flex-1 h-px bg-white/20;
+}
+
+/* ================================
+   LINKS
+================================ */
+.auth-link {
+  @apply text-sm text-rose-400 hover:text-rose-300 transition-colors;
+}
+
+/* ================================
+   ERROR / INFO TEXT
+================================ */
+.auth-error {
+  @apply text-sm text-red-400 mt-2;
+}
+
+.auth-info {
+  @apply text-sm text-white/60 mt-2;
+}
+
+/* ================================
+   OTP INPUT – Premium Box Style
+================================ */
+.otp-input {
+  @apply w-12 h-14 text-center text-xl font-semibold
+         rounded-xl
+         bg-white/10 backdrop-blur-md
+         border border-white/25
+         text-white
+         focus:outline-none
+         focus:border-rose-400
+         focus:ring-2 focus:ring-rose-400/40
+         transition-all duration-150;
+}
+
+.input {
+  @apply bg-white/10
+    text-white
+    placeholder-white/60;
+}
+
+/* ================================
+   LIGHT INPUT (For white cards)
+================================ */
+.input-light {
+  @apply w-full px-4 py-3 rounded-xl
+         bg-gray-100
+         border border-gray-300
+         text-gray-900
+         placeholder-gray-400
+         outline-none
+         focus:border-rose-500
+         focus:ring-2 focus:ring-rose-500/30
+         transition-all duration-200;
+}
+
+/* ================================
+   FILE INPUT – Premium Upload
+================================ */
+.file-input {
+  @apply flex items-center justify-between
+         px-4 py-3 rounded-xl
+         bg-gray-100
+         border border-dashed border-gray-400
+         text-sm text-gray-600
+         cursor-pointer
+         hover:border-rose-400
+         transition;
+}
+
+.file-input span {
+  @apply text-gray-500 truncate;
+}
+
+.file-input button {
+  @apply px-4 py-1.5 rounded-lg
+         bg-rose-500 text-white text-xs font-medium
+         hover:bg-rose-600
+         transition;
+}
