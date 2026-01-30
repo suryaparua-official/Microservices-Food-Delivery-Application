@@ -37,14 +37,14 @@ export const signUp = async (req: Request, res: Response) => {
 
     const token = await genToken(user._id.toString());
 
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: true,
-      sameSite: "none",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   secure: true,
+    //   sameSite: "none",
+    //   maxAge: 7 * 24 * 60 * 60 * 1000,
+    // });
 
-    return res.status(201).json(user);
+    return res.status(201).json({ user, token });
   } catch (error) {
     return res.status(500).json({ message: "signup error" });
   }
@@ -70,14 +70,14 @@ export const signIn = async (req: Request, res: Response) => {
 
     const token = await genToken(user._id.toString());
 
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: true,
-      sameSite: "none",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   secure: true,
+    //   sameSite: "none",
+    //   maxAge: 7 * 24 * 60 * 60 * 1000,
+    // });
 
-    return res.status(200).json(user);
+    return res.status(200).json({ user, token });
   } catch {
     return res.status(500).json({ message: "signin error" });
   }
@@ -214,14 +214,14 @@ export const googleAuth = async (req: Request, res: Response) => {
 
     const token = await genToken(user._id.toString());
 
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: true,
-      sameSite: "none",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   secure: true,
+    //   sameSite: "none",
+    //   maxAge: 7 * 24 * 60 * 60 * 1000,
+    // });
 
-    return res.status(200).json(user);
+    return res.status(200).json({ user, token });
   } catch {
     return res.status(500).json({ message: "google auth error" });
   }

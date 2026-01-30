@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   auth-service:
     build: ./auth-service
@@ -29,7 +27,6 @@ services:
       - ./order-service/.env
     depends_on:
       - payment-service
-      - delivery-service
       - notification-service
 
   payment-service:
@@ -57,7 +54,6 @@ services:
       - ./delivery-service/.env
     depends_on:
       - user-service
-      - order-service
       - notification-service
 
   realtime-service:
